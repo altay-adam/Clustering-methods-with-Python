@@ -34,7 +34,7 @@ plt.show()
 from sklearn.cluster import KMeans
 wcss = []
 
-for k in range(1,15):
+for k in range(1,15): #trying to find best "k" value
     kmeans = KMeans(n_clusters = k)
     kmeans.fit(df)
     wcss.append(kmeans.inertia_)
@@ -42,7 +42,7 @@ for k in range(1,15):
 plt.plot(range(1,15), wcss)
 plt.xlabel("number of k (cluster) value")
 plt.ylabel("wcss")
-plt.show()
+plt.show() # according to graph, best "k" value is 3
 
 
 #%% visualization for k = 3
