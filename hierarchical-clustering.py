@@ -35,9 +35,9 @@ merg = linkage(df, method = "ward")
 dendrogram(merg, leaf_rotation = 90)
 plt.xlabel("data points")
 plt.ylabel("euclidean distance")
-plt.show()
+plt.show() # according to dendrogram, best cluster count is 3 for this data. 
 
-#%% HC
+#%% HC for 3
 
 from sklearn.cluster import AgglomerativeClustering
 hierarticel_cluster = AgglomerativeClustering(n_clusters = 3, affinity = "euclidean", linkage = "ward")
